@@ -5,7 +5,6 @@ import com.entity.OrderItem;
 import com.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -19,7 +18,6 @@ public class OrderController {
     public Order placeOrder(@PathVariable Long userId, @RequestBody List<OrderItem> orderItems) {
         return orderService.placeOrder(userId, orderItems);
     }
-
     @GetMapping("/user/{userId}")
     public List<Order> getOrdersByUser(@PathVariable Long userId) {
         return orderService.getOrdersByUser(userId);
