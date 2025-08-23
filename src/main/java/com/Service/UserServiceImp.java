@@ -14,9 +14,8 @@ public class UserServiceImp implements UserService {
     private UserRepository userRepo;
 
     @Override
-    public String addNewUser(User user) {
-        userRepo.save(user);
-        return "User added successfully";
+    public User addNewUser(User user) {
+        return userRepo.save(user);
     }
 
     @Override
